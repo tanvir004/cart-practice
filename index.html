@@ -25,9 +25,9 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="plus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button id="minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
                            <input id="numberMbl" type="text" class="form-control text-center" value="1">
-                           <button id="minus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
                         <h5><span id="currentPhoneBalance">$1219</span></h5>
                         <img id="removePhone" src="images/remove.png" alt="" class="remove-item">
@@ -99,11 +99,21 @@ plusBtn.addEventListener("click", function(){
    let mobileNum = document.getElementById("numberMbl").value;
    let crrMobile = parseFloat(mobileNum);
    let currentMobile = crrMobile+1;
-   document.getElementById("numberMbl").innerText.value = currentMobile;
-//    const phonePrice = document.getElementById("currentPhoneBalance").innerText;
-//    const currentNumber = parseFloat(phonePrice);
-//    const totalPrice = currentNumber*currentMobile;
-//    document.getElementById("currentPhoneBalance").innerText = totalPrice;
+   document.getElementById("numberMbl").value = currentMobile;
+//calculate
+   const phonePrice = document.getElementById("currentPhoneBalance").innerText;
+   const currentNumber = parseFloat(phonePrice);
+   const totalPrice = currentNumber*currentMobile;
+   document.getElementById("currentPhoneBalance").innerText = totalPrice;
+ })
+
+ //mobile minus btn
+ const minusBtn = document.getElementById("minus");
+ minusBtn.addEventListener("click", function(){
+   let mobileNum = document.getElementById("numberMbl").value;
+   let crrMobile = parseFloat(mobileNum);
+   let currentMobile = crrMobile-1;
+   document.getElementById("numberMbl").value = currentMobile;
  })
 </script>
 </body>
