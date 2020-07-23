@@ -96,10 +96,10 @@ removeCase.addEventListener("click", function(){
 //mobile plus btn 
 const plusBtn = document.getElementById("plus");
 plusBtn.addEventListener("click", function(){
-   const mobileNum = document.getElementById("numberMbl").value;
-   const crrMobile = parseFloat(mobileNum);
-   const currentMobile = crrMobile+1;
-   document.getElementById("numberMbl").innerText = currentMobile;
+   let mobileNum = document.getElementById("numberMbl").value;
+   let crrMobile = parseFloat(mobileNum);
+   let currentMobile = crrMobile+1;
+   document.getElementById("numberMbl").innerText.value = currentMobile;
 //    const phonePrice = document.getElementById("currentPhoneBalance").innerText;
 //    const currentNumber = parseFloat(phonePrice);
 //    const totalPrice = currentNumber*currentMobile;
