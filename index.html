@@ -29,7 +29,7 @@
                            <input id="numberMbl" type="text" class="form-control text-center" value="1">
                            <button id="plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5><span id="currentPhoneBalance">$1219</span></h5>
+                        <h5>$<span id="currentPhoneBalance">1219</span></h5>
                         <img id="removePhone" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -101,9 +101,9 @@ plusBtn.addEventListener("click", function(){
    let currentMobile = crrMobile+1;
    document.getElementById("numberMbl").value = currentMobile;
 //calculate
-   const phonePrice = document.getElementById("currentPhoneBalance").innerText;
-   const currentNumber = parseFloat(phonePrice);
-   const totalPrice = currentNumber*currentMobile;
+   let phonePrice = document.getElementById("currentPhoneBalance").innerText;
+   let currentNumber = parseFloat(phonePrice);
+   let totalPrice = currentNumber+1219;
    document.getElementById("currentPhoneBalance").innerText = totalPrice;
  })
 
@@ -114,6 +114,11 @@ plusBtn.addEventListener("click", function(){
    let crrMobile = parseFloat(mobileNum);
    let currentMobile = crrMobile-1;
    document.getElementById("numberMbl").value = currentMobile;
+   //calculate
+   let Price = document.getElementById("currentPhoneBalance").innerText;
+   let Number = parseFloat(Price);
+   let total = Number-1219;
+   document.getElementById("currentPhoneBalance").innerText = total;
  })
 </script>
 </body>
